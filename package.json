@@ -1,0 +1,22 @@
+{
+  "name": "bob-rockefeller-portfolio",
+  "version": "1.0.0",
+  "description": "Bob Rockefeller's Photo Portfolio",
+  "author": "Bob Rockefeller",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf _site",
+    "newpost": "node ./scripts/newPost.cjs",
+    "serve": "pnpm run clean && eleventy --serve --quiet",
+    "serve-l": "eleventy --serve",
+    "serve-d": "DRAFTS=1 eleventy --serve --quiet",
+    "build": "eleventy"
+  },
+  "keywords": [],
+  "packageManager": "pnpm@10.26.0",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "eleventy-plugin-vento": "^5.2.1"
+  },
+  "type": "module"
+}

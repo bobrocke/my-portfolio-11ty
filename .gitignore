@@ -1,0 +1,6 @@
+node_modules
+_site
+pnpm-lock.yaml
+.zed
+.vscode
+codebook.toml
