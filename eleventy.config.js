@@ -1,6 +1,10 @@
 import { VentoPlugin } from "eleventy-plugin-vento";
 
 export default async function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy("src/assets/css");
+  eleventyConfig.addPassthroughCopy("src/assets/images");
+
+
   eleventyConfig.addPlugin(VentoPlugin);
 }
 

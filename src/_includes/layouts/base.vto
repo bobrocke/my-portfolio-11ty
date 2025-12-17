@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name='description' content="{{ site.description }}">
+    <meta name="generator" content="{{ eleventy.generator }}">
+
+    <link rel="icon" type="image/png" href="/assets/images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/images/site.webmanifest" />
+
+    <link rel="stylesheet" href="/assets/css/reset.css"/>
+    <link rel="stylesheet" href="/assets/css/global.css"/>
+    <link rel="stylesheet" href="/assets/css/CUBE.css"/>
+    <link rel="stylesheet" href="/assets/css/semantics.css"/>
+
+
+
+
+    {{ if process.env.ELEVENTY_RUN_MODE === "build" }}
+      <title>BR | {{ title }}</title>
+    {{ else }}
+      <title>11ty | {{ title }}</title>
+    {{ /if }}
+
+  </head>
+
+  <body>
+
+  </body>
+
+</html>

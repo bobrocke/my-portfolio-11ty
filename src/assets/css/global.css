@@ -1,0 +1,91 @@
+/*
+Global Styles - Variables, HTML, typography, etc.
+*/
+
+/*
+Breakpoints
+  xs: <576
+  sm: >=576
+  md: >=768
+  lg: >=992
+*/
+
+/* Variables */
+:root {
+  --font-sans: "PT Sans", "sans-serif";
+  --font-serif: "PT Serif", "serif";
+  --font-mono: "Monaco", "monospace";
+
+  /* https://utopia.fyi/type/calculator?c=390,12,1.2,992,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  --text-xs: clamp(0.5208rem, 0.34rem + 0.742vw, 0.8rem);
+  --text-sm: clamp(0.625rem, 0.3821rem + 0.9967vw, 1rem);
+  --text-m: clamp(0.75rem, 0.4261rem + 1.3289vw, 1.25rem);
+  --text-lg: clamp(0.9rem, 0.4708rem + 1.7608vw, 1.5625rem);
+  --text-xl: clamp(1.08rem, 0.5144rem + 2.3206vw, 1.9531rem);
+  --text-2xl: clamp(1.296rem, 0.554rem + 3.0443vw, 2.4414rem);
+  --text-3xl: clamp(1.5552rem, 0.5857rem + 3.9776vw, 3.0518rem);
+  --text-4xl: clamp(1.8662rem, 0.604rem + 5.1786vw, 3.8147rem);
+
+  /* @link https://utopia.fyi/space/calculator?c=390,12,1.2,992,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  --space-3xs: clamp(0.1875rem, 0.1065rem + 0.3322vw, 0.3125rem);
+  --space-2xs: clamp(0.375rem, 0.213rem + 0.6645vw, 0.625rem);
+  --space-xs: clamp(0.5625rem, 0.3196rem + 0.9967vw, 0.9375rem);
+  --space-s: clamp(0.75rem, 0.4261rem + 1.3289vw, 1.25rem);
+  --space-m: clamp(1.125rem, 0.6391rem + 1.9934vw, 1.875rem);
+  --space-l: clamp(1.5rem, 0.8522rem + 2.6578vw, 2.5rem);
+  --space-xl: clamp(2.25rem, 1.2782rem + 3.9867vw, 3.75rem);
+  --space-2xl: clamp(3rem, 1.7043rem + 5.3156vw, 5rem);
+  --space-3xl: clamp(4.5rem, 2.5565rem + 7.9734vw, 7.5rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.1875rem, -0.0959rem + 1.1628vw, 0.625rem);
+  --space-2xs-xs: clamp(0.375rem, 0.0106rem + 1.495vw, 0.9375rem);
+  --space-xs-s: clamp(0.5625rem, 0.1171rem + 1.8272vw, 1.25rem);
+  --space-s-m: clamp(0.75rem, 0.0212rem + 2.99vw, 1.875rem);
+  --space-m-l: clamp(1.125rem, 0.2342rem + 3.6545vw, 2.5rem);
+  --space-l-xl: clamp(1.5rem, 0.0424rem + 5.9801vw, 3.75rem);
+  --space-xl-2xl: clamp(2.25rem, 0.4684rem + 7.309vw, 5rem);
+  --space-2xl-3xl: clamp(3rem, 0.0847rem + 11.9601vw, 7.5rem);
+
+  /* Custom pairs */
+  --space-s-l: clamp(0.75rem, -0.3837rem + 4.6512vw, 2.5rem);
+
+  /* @link https://utopia.fyi/grid/calculator?c=390,12,1.2,992,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=2xs,l,3xl,6 */
+  --grid-max-width: 62.5rem;
+  --grid-gutter: var(
+    --space-2xs-l,
+    clamp(0.375rem, -0.9836rem + 5.5738vw, 2.5rem)
+  );
+  --grid-columns: 6;
+
+  /*
+  Grays (really neutrals)
+  */
+
+  --color-gray-0: #f2f2f2;
+  --color-gray-10: #d3d3d3;
+  --color-gray-20: #b7b7b7;
+  --color-gray-30: #9e9e9e;
+  --color-gray-40: #878787;
+
+  --color-gray-50: #727272;
+
+  --color-gray-60: #5e5e5e;
+  --color-gray-70: #4b4b4b;
+  --color-gray-80: #383838;
+  --color-gray-90: #232323;
+  --color-gray-100: #000000;
+
+  /*
+  Light Theme
+  */
+
+  --color-text-primary: var(--color-gray-80);
+  --color-text-secondary: var(--color-gray-50);
+  --color-text-accent: red;
+  --color-text-light: var(--color-gray-10);
+  --color-bg-lightest: var(--color-gray-0);
+  --color-bg-light: var(--color-gray-10);
+  --color-bg-dark: var(--color-gray-50);
+  --color-bg-darkest: var(--color-gray-90);
+}
