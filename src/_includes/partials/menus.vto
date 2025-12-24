@@ -1,0 +1,17 @@
+<nav>
+  <div>
+    <img src="/assets/images/logos/logo.svg" alt="Logo" />
+  </div>
+
+  <ul class="nav-list">
+    {{ for menu of site.menu }}
+      {{ if menu.url === page.url }}
+        <li class="inactive">{{ menu.name }}</li>
+      {{ else }}
+        <li>
+          <a href="{{ menu.url }}">{{ menu.name }}</a>
+        </li>
+      {{ /if }}
+    {{ /for }}
+  </ul>
+</nav>

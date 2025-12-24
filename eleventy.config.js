@@ -5,7 +5,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/images");
 
 
-  eleventyConfig.addPlugin(VentoPlugin);
+  eleventyConfig.addPlugin(VentoPlugin)
 }
 
 export const config = {

@@ -1,3 +1,18 @@
+a {
+  color: var(--color-text-light);
+
+  &:hover {
+    color: var(--color-text-accent);
+  }
+}
+
 body {
   background-color: var(--color-bg-darkest);
+  margin: var(--space-m);
+}
+
+@media (min-width: 600px){
+  body {
+    max-width: 1000px;
+  }
 }

@@ -1,0 +1,38 @@
+/*
+Blocks from CUBE CSS
+A block is a skeletal component or organizational structure.
+*/
+
+/*
+Navigation
+*/
+
+nav {
+  display: flex;
+  color: var(--color-text-light);
+  width: 100%;
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-title);
+    width: 100%;
+    font-size: var(--text-lg);
+  }
+
+  .nav-list li {
+    list-style: none;
+    display: inline-block;
+    padding-left: var(--space-m);
+  }
+
+  a {
+    text-decoration: none;
+
+    &&:hover
+    {
+      color: var(--color-text-accent);
+    }
+  }
+}

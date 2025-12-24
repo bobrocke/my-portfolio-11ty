@@ -12,8 +12,8 @@ Breakpoints
 
 /* Variables */
 :root {
-  --font-sans: "PT Sans", "sans-serif";
-  --font-serif: "PT Serif", "serif";
+  --font-title: "Philosopher", "sans-serif";
+  --font-paragraph: "Andika", "sans-serif";
   --font-mono: "Monaco", "monospace";
 
   /* https://utopia.fyi/type/calculator?c=390,12,1.2,992,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
