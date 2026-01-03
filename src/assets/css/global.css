@@ -52,10 +52,7 @@ Breakpoints
 
   /* @link https://utopia.fyi/grid/calculator?c=390,12,1.2,992,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=2xs,l,3xl,6 */
   --grid-max-width: 62.5rem;
-  --grid-gutter: var(
-    --space-2xs-l,
-    clamp(0.375rem, -0.9836rem + 5.5738vw, 2.5rem)
-  );
+  --grid-gutter: var(--space-2xs-l, clamp(0.375rem, -0.9836rem + 5.5738vw, 2.5rem));
   --grid-columns: 6;
 
   /*

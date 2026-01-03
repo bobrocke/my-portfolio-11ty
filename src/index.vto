@@ -2,3 +2,14 @@
 title: Home
 layout: layouts/base.vto
 ---
+
+<div class="galleries">
+  {{ for gallery of site.galleries}}
+    {{ set coverImageURL = "/assets/images/galleries" + gallery.url + gallery.coverImage }}
+    <figure class="galleryCover">
+      <a href="{{ gallery.url }}">
+        <img src="{{ coverImageURL }}" alt="{{ gallery.name }}" ></a>
+      <figcaption>{{ gallery.name }}</figcaption>
+    </figure>
+  {{ /for }}
+</div>

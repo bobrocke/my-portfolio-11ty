@@ -10,22 +10,31 @@
     }
   ],
 
-  "submenu": [
+  "galleries": [
     {
-      "name": "Nature",
-      "url": "/nature/"
+      "name": "Fauna",
+      "url": "/fauna/",
+      "coverImage": "Orangutan.jpg"
+    },
+    {
+      "name": "Flora",
+      "url": "/flora/",
+      "coverImage": "Kees Nelis Tulips.jpg"
     },
     {
       "name": "People",
-      "url": "/people/"
-    },
-    {
-      "name": "Places",
-      "url": "/places/"
+      "url": "/people/",
+      "coverImage": "Jan.jpg"
     },
     {
       "name": "Pets",
-      "url": "/pets/"
+      "url": "/pets/",
+      "coverImage": "Fang.jpg"
+    },
+    {
+      "name": "Places",
+      "url": "/places/",
+      "coverImage": "Beach_Hut.jpg"
     }
   ]
 }

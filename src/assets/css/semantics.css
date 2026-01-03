@@ -9,6 +9,7 @@ a {
 body {
   background-color: var(--color-bg-darkest);
   margin: var(--space-m);
+  color: var(--color-text-light);
 }
 
 @media (min-width: 600px){

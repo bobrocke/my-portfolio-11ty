@@ -23,12 +23,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
 
 
-    {{ if process.env.ELEVENTY_RUN_MODE === "build" }}
+    {{ if prod === "build" }}
       <title>BR | {{ title }}</title>
     {{ else }}
       <title>11ty | {{ title }}</title>
     {{ /if }}
-
   </head>
 
   <body>
