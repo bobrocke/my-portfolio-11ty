@@ -4,14 +4,11 @@ import image from "@11ty/eleventy-img";
 
 import fs from "fs";
 import path from "path";
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/css");
   eleventyConfig.addPassthroughCopy("src/assets/images");
+  eleventyConfig.addPassthroughCopy("galleries");
 
   eleventyConfig.addShortcode("getAspectRatio", async function (imagePath) {
     const metadata = image.statsSync(imagePath, {
@@ -37,15 +34,30 @@ export default async function (eleventyConfig) {
   // Create a collection of all the fauna images
   eleventyConfig.addCollection("fauna", function(collectionApi) {
     // const imageDirectory = path.resolve(__dirname, "assets/images/galleries/fauna");
-    const imageDirectory = "/assets/images/galleries/fauna";
+    const imageDirectory = "galleries/fauna";
     const fileNames = fs.readdirSync(imageDirectory);
     const jpgFiles = fileNames.filter(function(fileName) {
       return fileName.endsWith('.jpg')
     });
     const images = jpgFiles.map(function(image) {
-      return path.join(imageDirectory, image)
+      return path.join("/", imageDirectory, image)
     });
-    console.log(images);
+
+    return images;
+  });
+
+  // Create a collection of all the flora images
+  eleventyConfig.addCollection("flora", function(collectionApi) {
+    // const imageDirectory = path.resolve(__dirname, "assets/images/galleries/fauna");
+    const imageDirectory = "galleries/flora";
+    const fileNames = fs.readdirSync(imageDirectory);
+    const jpgFiles = fileNames.filter(function(fileName) {
+      return fileName.endsWith('.jpg')
+    });
+    const images = jpgFiles.map(function(image) {
+      return path.join("/", imageDirectory, image)
+    });
+
     return images;
   });
 
