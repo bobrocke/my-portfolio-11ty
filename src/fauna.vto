@@ -4,3 +4,11 @@ layout: layouts/base.vto
 ---
 
 {{ include "/partials/submenus.vto" }}
+
+{{ collections.fauna | log }}
+
+<div class="image-grid">
+  {{ for image of collections.fauna }}
+    <img src="{{ image }} ">
+  {{ /for }}
+</div>

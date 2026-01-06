@@ -42,7 +42,7 @@ nav {
 }
 
 /*
-Image Cards
+Gallery Cards
 */
 
 .galleryCover img {
@@ -67,5 +67,36 @@ Image Cards
     font-family: var(--font-title);
     font-size: var(--text-m);
     margin-top: var(--space-3xs);
+  }
+}
+
+/*
+Image Cards
+*/
+
+.image-grid {
+  display: grid;
+  /* Creates 3 columns of equal width that take up available space */
+  grid-template-columns: repeat(3, 1fr);
+  /* Sets a fixed height for rows, 'auto' ensures rows can expand if content needs more space */
+  grid-auto-rows: minmax(200px, auto);
+  gap: 10px; /* Adds space between grid items */
+  padding: 10px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 100%;
+  /* Ensures images fill their cell while maintaining aspect ratio, preventing distortion */
+  object-fit: cover;
+  /* Fixes potential alignment issues with images inside grid cells */
+  display: block;
+}
+
+/* Optional: Add responsiveness with a media query for smaller screens */
+@media (max-width: 600px) {
+  .image-grid {
+    /* Changes to 2 columns on screens up to 600px wide */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
