@@ -3,10 +3,4 @@ title: Flora
 layout: layouts/base.vto
 ---
 
-{{ include "/partials/submenus.vto" }}
-
-<div class="image-grid">
-  {{ for image of collections.flora }}
-    <img src="{{ image }} ">
-  {{ /for }}
-</div>
+{{ include "/partials/imageGrid.vto" { gallery: "flora" } }}

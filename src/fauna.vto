@@ -3,10 +3,4 @@ title: Fauna
 layout: layouts/base.vto
 ---
 
-{{ include "/partials/submenus.vto" }}
-
-<div class="image-grid">
-  {{ for image of collections.fauna }}
-    <img src="{{ image }} ">
-  {{ /for }}
-</div>
+{{ include "/partials/imageGrid.vto" { gallery: "fauna" } }}

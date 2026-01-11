@@ -8,8 +8,57 @@ a {
 
 body {
   background-color: var(--color-bg-darkest);
-  margin: var(--space-m);
+  margin: var(--space-m) auto var(--space-m) auto;
   color: var(--color-text-light);
+}
+
+/*
+Footer
+*/
+
+footer {
+  margin-top: var(--space-m);
+  font-family: var(--font-paragraph);
+  font-size: var(--text-xs);
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  ul {
+    display: flex;
+    font-size: var(--text-lg);
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--space-2xs);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
+}
+
+h1 {
+  font-size: var(--text-2xl);
+}
+
+h2 {
+  font-size: var(--text-xl);
+}
+
+h3 {
+  font-size: var(--text-lg);
+}
+
+p {
+  font-family: var(--font-paragraph);
+  font-size: var(--text-m);
+  margin-bottom: var(--space-xs);
 }
 
 @media (min-width: 600px){

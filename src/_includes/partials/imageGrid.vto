@@ -1,7 +1,7 @@
 {{ include "/partials/submenus.vto" }}
 
 <div class="image-grid">
-  {{ for image of collections.{{gallery}} }}
-    <img src="{{ image }} ">
+  {{ for image of collections[gallery] }}
+    <a class="glightbox" data-description="{{ image.description }}" href="{{ image.source }} "><img src="{{ image.source }}" alt="{{ image.description }}"></a>
   {{ /for }}
 </div>

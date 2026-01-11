@@ -3,6 +3,11 @@ Blocks from CUBE CSS
 A block is a skeletal component or organizational structure.
 */
 
+.content {
+  padding: var(--space-m);
+  margin-top: var(--space-m);
+}
+
 /*
 Navigation
 */
@@ -55,8 +60,6 @@ Gallery Cards
   padding: var(--space-m);
   place-content: center;
   margin-top: var(--space-m);
-  border: 1px solid var(--color-gray-80);
-  border-radius: var(--space-m);
 
   figure {
     padding: var(--space-s);
@@ -75,13 +78,14 @@ Image Cards
 */
 
 .image-grid {
+  margin-top: var(--space-m);
   display: grid;
   /* Creates 3 columns of equal width that take up available space */
   grid-template-columns: repeat(3, 1fr);
   /* Sets a fixed height for rows, 'auto' ensures rows can expand if content needs more space */
   grid-auto-rows: minmax(200px, auto);
-  gap: 10px; /* Adds space between grid items */
-  padding: 10px;
+  gap: var(--space-xs); /* Adds space between grid items */
+  padding: var(--space-xs);
 }
 
 .image-grid img {
@@ -93,10 +97,26 @@ Image Cards
   display: block;
 }
 
-/* Optional: Add responsiveness with a media query for smaller screens */
 @media (max-width: 600px) {
   .image-grid {
     /* Changes to 2 columns on screens up to 600px wide */
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/*
+gLightbox overrides
+*/
+
+.glightbox-clean .gslide-description {
+  background: rgba(0, 0, 0, 0.92);
+}
+
+.glightbox-clean .gdesc-inner {
+  padding: var(--space-2xs);
+}
+
+.glightbox-clean .gslide-media {
+  padding-left: var(--space-m);
+  padding-right: var(--space-m);
 }
