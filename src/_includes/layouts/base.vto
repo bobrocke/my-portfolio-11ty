@@ -27,7 +27,7 @@
     href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Philosopher:wght@400;700&display=swap"
     rel="stylesheet">
 
-  {{ if prod === "production" }}
+  {{ if prod != "build" }}
   <script defer src="https://cloud.umami.is/script.js" data-website-id="fa1aa0ce-1ab5-49c7-ac5a-fccf68dd33b4"></script>
   {{ /if }}
 
